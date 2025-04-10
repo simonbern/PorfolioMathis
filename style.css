@@ -49,28 +49,57 @@
   .container {
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     gap: 400px;
     padding-top: 20px;
   }
   .image-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: auto;
     padding: 0 5vw;
     box-sizing: border-box;
     font-family: "Copperplate", "Papyrus", fantasy;
+    position: relative;
+
   }
+
+  .image-container .caption {
+  margin-top: 10px;
+  visibility: hidden;
+  color: white;
+  font-size: 15px;
+  width: 55%;
+  text-align: inherit;
+  flex-direction: inherit;
+  padding : 10px;
+}
+
+  .image-container img {
+    display: block;
+    max-width: 100%;
+  }
+
+  .image-container img:hover + .caption {
+    visibility: visible;
+  }
+
   .image-container:nth-child(3n + 1) {
     align-items: center;
+    text-align: justify;
+    flex-direction: column;
   }
   .image-container:nth-child(3n + 2) {
     align-items: flex-start;
+    text-align: justify;
+    flex-direction: row;
   }
   .image-container:nth-child(3n) {
     align-items: flex-end;
+    text-align: justify;
+    flex-direction: row-reverse;
   }
   img {
     max-width: 80vw;
@@ -82,6 +111,7 @@
   }
   img:hover {
     transform: scale(1.01);
+    opacity: 0.7;
   }
   .caption {
     margin-top: 10px;

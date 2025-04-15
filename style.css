@@ -53,7 +53,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    gap: 400px;
+    gap: 200px;
     padding-top: 150px;
   }
   .image-container {
@@ -103,6 +103,24 @@
     text-align: justify;
     flex-direction: row-reverse;
   }
+
+  .image-container.artefact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .image-container.artefact .caption {
+    text-align: center;
+    visibility: hidden; /* still hidden until hover */
+  }
+
+  .image-container.artefact img:hover + .caption {
+    visibility: visible;
+  }
+
   img {
     max-width: 80vw;
     max-height: 80vh;
@@ -113,7 +131,6 @@
   }
   img:hover {
     transform: scale(1.01);
-    opacity: 0.7;
   }
   .caption {
     margin-top: 10px;
@@ -245,6 +262,18 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
   }
+
+  #sectio0 {
+      width: 100%;
+      height: 1000px;
+      background-image: url("pg/DSC08819-2.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+    }
+
   footer a.active {
     border: 2px solid #a4c639;
     padding: 5px 10px;

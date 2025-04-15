@@ -38,12 +38,13 @@
     scroll-behavior: smooth;
   }
   p.description {
-    color: #fff;
-    font-size: 1.8rem;
-    max-width: 600px;
+    color: #b7b7b7;
+    font-size: 1rem;
+    max-width: 12000px;
     margin: 20px auto 10px auto;
-    text-align: center;
-    font-family: "copperplate";
+    padding: 0 150px;
+    text-align: justify;
+    font-family: "Georgia";
   }
 
   .container {
@@ -53,7 +54,7 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 400px;
-    padding-top: 20px;
+    padding-top: 150px;
   }
   .image-container {
     display: flex;
@@ -75,6 +76,7 @@
   text-align: inherit;
   flex-direction: inherit;
   padding : 10px;
+
 }
 
   .image-container img {
@@ -117,6 +119,7 @@
     margin-top: 10px;
     font-size: 1.2rem;
     color: #333;
+    font-family: "Helvetica";
   }
   .footer {
     position: fixed;
